@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function Complete()
+        {
+            var Elem="Прізвище: " + document.Sel1.Family.value +
+                "\nІм'я: " + document.Sel1.Name.value +
+                "\nПо-батькові: " + document.Sel1.FatherName.value +
+                "\nEmail: " + document.Sel1.Email.value +
+                "\nПароль: " + document.Sel1.Password.value +
+                "\nПідтвердіть пароль: " + document.Sel1.RepeatPassword.value +
+                "\nТелефон: " + document.Sel1.Phone.value +
+                "\nАдреса: " + document.Sel1.Adress.value;
+            alert(Elem);
+        }
+        function btnClick()
+        {
+            if(document.Sel1.Sex[0].checked){
+                document.Sel1.Sex[1].click();
+            }else{
+                document.Sel1.Sex[0].click();
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="lesson03.css">
+    <title>lesson03</title>
+</head>
+<body>
+    <h3>Task1</h3>
+    <div class="wrapper">
+        <h3>Реєстрація</h3>
+        <div class="block">
+            <FORM NAME="Sel1">
+                <div class="block1"
+                    <p>Прізвище: <INPUT class="inpt" NAME="Family" SIZE=50
+                        onBlur="this.value=this.value.toUpperCase()"></p>
+                    <p>Ім'я: <INPUT class="inpt" NAME="Name" SIZE=50
+                            onBlur="this.value=this.value.toUpperCase()"></p>
+                    <p>По-батькові: <INPUT class="inpt" NAME="FatherName" SIZE=50
+                            onBlur="this.value=this.value.toUpperCase()"></p>
+                    <p>Дата народження: <SELECT name="Day" SIZE=1> <OPTION VALUE="0">День</OPTION>
+                        <OPTION VALUE="1">1</OPTION> 
+                        <OPTION VALUE="2">2</OPTION> 
+                        <OPTION VALUE="3">3</OPTION> 
+                        <OPTION VALUE="4">4</OPTION> 
+                        <OPTION VALUE="5">5</OPTION> 
+                        <OPTION VALUE="6">6</OPTION> 
+                        <OPTION VALUE="7">7</OPTION> 
+                        <OPTION VALUE="8">8</OPTION> 
+                        <OPTION VALUE="9">9</OPTION> 
+                        <OPTION VALUE="10">10</OPTION> 
+                        <OPTION VALUE="11">11</OPTION> 
+                        <OPTION VALUE="12">12</OPTION> 
+                        <OPTION VALUE="13">13</OPTION> 
+                        <OPTION VALUE="14">14</OPTION> 
+                        <OPTION VALUE="15">15</OPTION> 
+                        <OPTION VALUE="16">16</OPTION> 
+                        <OPTION VALUE="17">17</OPTION> 
+                        <OPTION VALUE="19">19</OPTION> 
+                        <OPTION VALUE="19">19</OPTION> 
+                        <OPTION VALUE="20">20</OPTION> 
+                        <OPTION VALUE="21">21</OPTION> 
+                        <OPTION VALUE="22">22</OPTION> 
+                        <OPTION VALUE="23">23</OPTION> 
+                        <OPTION VALUE="24">24</OPTION>
+                        <OPTION VALUE="25">25</OPTION> 
+                        <OPTION VALUE="26">26</OPTION> 
+                        <OPTION VALUE="27">27</OPTION> 
+                        <OPTION VALUE="28">28</OPTION> 
+                        <OPTION VALUE="29">29</OPTION> 
+                        <OPTION VALUE="30">30</OPTION> 
+                        <OPTION VALUE="31">31</OPTION>
+                    </SELECT>
+                    <SELECT name="Month" SIZE=1> <OPTION VALUE="0">Місяць
+                        <OPTION VALUE="1">Січень</OPTION> 
+                        <OPTION VALUE="2">Лютий</OPTION> 
+                        <OPTION VALUE="3">Березень</OPTION> 
+                        <OPTION VALUE="4">Квітень</OPTION> 
+                        <OPTION VALUE="5">Травень</OPTION>
+                        <OPTION VALUE="6">Червень</OPTION>
+                        <OPTION VALUE="7">Липень</OPTION> 
+                        <OPTION VALUE="8">Серпень</OPTION> 
+                        <OPTION VALUE="9">Вересень</OPTION> 
+                        <OPTION VALUE="10">Жовтень</OPTION> 
+                        <OPTION VALUE="11">Листопад</OPTION> 
+                        <OPTION VALUE="12">Грудень</OPTION>
+                    </SELECT>
+                    <input type="number" name="year" step="1" min="1900" max="2199" placeholder="year">
+                    </p>
+                    <p>Email:<INPUT class="inpt" NAME="Email" SIZE=50
+                            onBlur="this.value=this.value.toLowerCase()"></p>
+                    <p>Пароль: <INPUT class="inpt" TYPE="password" NAME="Pwd" SIZE=50
+                                    onFocus="this.select();"></p>
+                    <p>Підтвердіть пароль: <INPUT class="inpt" TYPE="password" NAME="Pwd1" SIZE=50
+                                    onFocus="this.select();"></p>
+                    <p>Телефон:<INPUT class="inpt" NAME="Phone" SIZE=50></p>
+                    <p>Адреса:<textarea name="comment"></textarea></p>
+                </div>
+                <div class="block2"
+                    <p>Стать:<INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Man">Чол <INPUT TYPE="RADIO"  NAME="Sex" VALUE ="Woman">Жін</p>
+                    <p><INPUT TYPE="RADIO"  NAME="Agreement" VALUE ="Agree">Я згоден з <a href="link1">умовами</a></p>
+                    <p><INPUT TYPE="button" VALUE="Реєстрація" onClick="Complete();"><INPUT TYPE="reset" VALUE="Очистити форму"></p>
+                </div>
+            </FORM>
+        </div>
+    </div>
+    <h3>Task2</h3>
+    <div>
+        <label for="name">Enter your name:</label>
+        <input type="text" name="name" id="name">
+        <script>
+            function sayHi(name){
+                var name = document.getElementById("name").value;
+                if(typeof name == "string"){
+                    alert('Hello, ' + name +'!');
+                }else{
+                    alert('Не той тип даних!');
+                }
+            }
+        </script>
+        <button type="submit" onclick="sayHi(name)"> Submit</button>
+    </div>
+    <h3>Task3</h3>
+    <div>
+        <script>
+            const type1 = "Text"
+            console.log(typeof type1)
+            const type2 = 123
+            console.log(typeof type2)
+            const type3 = false
+            console.log(typeof type3)
+            const type4 = undefined
+            console.log(typeof type4)
+            const type5 = null
+            console.log(typeof type5)
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+.wrapper{
+    background-color: #FAEBD7;
+    width: 600px;
+    height: 600px;
+}
+.block1{
+    text-align:end;
+    width: 600px;
+}
+.block2{
+    margin-left: 150px;
+}
+textarea{
+    width: 400px;
+    height: 100px;
+}
+.inpt{
+    width: 400px;
+}
+input[type="button"]{
+    background-color: #4169E1;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+}
